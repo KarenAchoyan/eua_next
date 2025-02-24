@@ -19,9 +19,38 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.dropdown{
+  display: none;
+  z-index: 222;
+  position: relative;
+}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.menu-item:hover .dropdown{
+  display: block;
+}
+.sub-dropdown{
+  display: none;
+}
+
+.sub-dropdown-button:hover .sub-dropdown{
+  display: block;
+}
+.language-switcher img{
+  object-fit: cover;
+  width: 20px;
+  height: 15px;
+}
+.swiper-horizontal{
+  height: 100%;
+}
+.mobileMenu {
+  background-color: rgb(21 23 132);
+  width: 40%;
+  transition: 1s;
+}
+.hiddenMenu{
+  transform:translateX(100%);
+}
+.showMenu{
+  transform:translateX(0%);
 }
