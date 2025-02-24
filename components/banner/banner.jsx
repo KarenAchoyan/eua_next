@@ -50,8 +50,8 @@ const Banner = () => {
                     <Form.Item label="Education" name="education" rules={[{ required: true, message: "Please select your education level" }]}>
                         <Select>
                             <Option value="high-school">High School</Option>
-                            <Option value="bachelor">Bachelor's</Option>
-                            <Option value="master">Master's</Option>
+                            <Option value="bachelor">Bachelors</Option>
+                            <Option value="master">Masters</Option>
                         </Select>
                     </Form.Item>
                     <Form.Item label="Faculty" name="faculty" rules={[{ required: true, message: "Please select your faculty" }]}>
