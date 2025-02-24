@@ -1,5 +1,5 @@
-import {MainProvider} from "../../my-next14-app/provider/MainProvider";
-import Home from "../../my-next14-app/components/Home";
+import {MainProvider} from "@/provider/MainProvider";
+import Home from "@/components/Home";
 
 async function getGalleries() {
     const res = await fetch('https://eua.am/api/galleries')

@@ -1,5 +1,5 @@
 
-import "../../eua-app/app/globals.css";
+import "../app/globals.css";
 import App from "../components/layouts/app";
 
 
