@@ -12,11 +12,11 @@ const HeaderMenu = ({menuItems}) => {
                                            title={menu.title}> {menu.title}</Link>
                                 </span>
                         {menu.subMenu && (
-                            <div className='absolute dropdown-parent'>
+                            <div className='absolute dropdown-parent '>
                                 <ul className=" left-0 mt-2 w-52 bg-white text-black shadow-lg rounded-lg  dropdown">
                                     {Array.isArray(menu.subMenu)
                                         ? menu.subMenu.map((subItem, subIndex) => (
-                                            <li key={subIndex} className="relative group  sub-dropdown-button">
+                                            <li key={subIndex} className="relative group sub-dropdown-button itemMenus">
                                                 {typeof subItem === "string" ? (
                                                     <a
                                                         href="#"
@@ -27,7 +27,7 @@ const HeaderMenu = ({menuItems}) => {
                                                 ) : (
                                                     <>
                                                                 <span
-                                                                    className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-200">
+                                                                    className="flex items-center justify-between w-full  px-4 py-2  hover:bg-gray-200">
                                                                     {subItem.title}
                                                                 </span>
                                                         <ul className="absolute left-full top-0 mt-0 w-48 bg-white text-black shadow-lg rounded-lg sub-dropdown">

@@ -7,33 +7,130 @@ import {MenuOutlined} from "@ant-design/icons";
 
 const App = ({children}) => {
 
+    // const menuItems = [
+    //     {
+    //         title: "About us",
+    //         subMenu: [
+    //             {
+    //                 title: "Governing Bodies", subMenu: [
+    //                     {title: "Board of Trustees", path: "/about/trustees"},
+    //                     {title: "Scientific Council", path: "/about/trustees"},
+    //                 ]
+    //             },
+    //             {title:  "Rector", path: "/about/trustees"},
+    //             {title:  "Staff", path: "/about/trustees"},
+    //             {title:  "Branches", path: "/about/trustees"},
+    //             {title:  "Organization", path: "/about/trustees"},
+    //             {title:  "Documents", path: "/about/trustees"},
+    //             {title:  "Vacancies", path: "/about/trustees"},
+    //             {title:  "FAQ", path: "/about/trustees"},
+    //             {title:  "University Ranking", path: "/about/trustees"},
+    //         ],
+    //     },
+    //     {title: "Applicant"},
+    //     {title: "Education"},
+    //     {title: "Science"},
+    //     {title: "Students"},
+    //     {title: "Career"},
+    //     {title: "Internationalization"},
+    //     {title: "Media", pathUrl: "/news"},
+    //     {title: "Contact us", pathUrl: "/contact"},
+    // ];
+
+
     const menuItems = [
         {
             title: "About us",
             subMenu: [
                 {
                     title: "Governing Bodies", subMenu: [
-                        {title: "Board of Trustees", path: "/about/trustees"},
+                        {title: "Board of trustees", path: "/about/trustees"},
                         {title: "Scientific Council", path: "/about/trustees"},
+                        {title:  "Rector", path: "/about/trustees"},
+
                     ]
                 },
-                {title:  "Rector", path: "/about/trustees"},
-                {title:  "Staff", path: "/about/trustees"},
+                {title:  "Staff", subMenu: [
+                        {title:'Vice-Rectors', path:"/about/trustees"},
+                        {title: 'Departments', path:"/about/trustees"},
+                        {title:'Faculties and Chairs', path:"/about/trustees"},
+                        {title:'Organization Structure', path:"/about/trustees"},
+                    ]},
                 {title:  "Branches", path: "/about/trustees"},
-                {title:  "Organization", path: "/about/trustees"},
-                {title:  "Documents", path: "/about/trustees"},
+                {title:  "Documents", subMenu: [
+                        {title: "Charter", path:"/about/trustees"},
+                        {title: "Strategy", path:"/about/trustees"},
+                        {title: "Reports", path:"/about/trustees"},
+                        {title: "Regulations", path:"/about/trustees"},
+                        {title: "Useful links ks", path:"/about/trustees"},
+                    ]},
+                {title: 'Quality',subMenu: [
+                        {title: 'Internal QA', path:"/about/trustees"},
+                        {title: 'Accreditation', path:"/about/trustees"},
+                    ]},
                 {title:  "Vacancies", path: "/about/trustees"},
-                {title:  "FAQ", path: "/about/trustees"},
                 {title:  "University Ranking", path: "/about/trustees"},
+                {title:  "FAQ", path: "/about/trustees"},
+
             ],
         },
-        {title: "Applicant"},
-        {title: "Education"},
-        {title: "Science"},
-        {title: "Students"},
-        {title: "Career"},
-        {title: "Internationalization"},
-        {title: "Media", pathUrl: "/news"},
+        {title: "Applicant", subMenu: [
+                {title:'Required Documents and Exam Samples' ,path:"/about/trustees"},
+                {title:'Tuition Fees' ,path:"/about/trustees"},
+                {title:'Foreign Applicants' ,path:"/about/trustees"},
+                {title:'Preparatory Courses' ,path:"/about/trustees"},
+            ]},
+        {title: "Education", subMenu: [
+                {title:"Bachelor's Degree", path:"/about/trustees"},
+                {title:"Masters's Degree", path:"/about/trustees"},
+                {title:"Postgraduate Education", subMenu: [
+                        {title:'Doctorial Studies', path:"/about/trustees"},
+                        {title:'PHD Students', path:"/about/trustees"},
+                        {title:'Postgraduated Studies', path:"/about/trustees"},
+                    ]},
+                {title:"Bachelor's Degree", path:"/about/trustees"},
+                {title:"Bachelor's Degree", path:"/about/trustees"},
+            ]},
+        {title: "Science", subMenu: [
+                {title:'Scientific collection', path:"/about/trustees"},
+                {title:'Publications', path:"/about/trustees"},
+                {title:'Labaratories', path:"/about/trustees"},
+            ]},
+        {title: "Students", subMenu: [
+                {title:'Student Council', path:"/about/trustees"},
+                {title:'E-Learning Moodle', path:"/about/trustees"},
+                {title:'E-Library', path:"/about/trustees"},
+                {title:'Course Schedules, Academic Schedules', path:"/about/trustees"},
+                {title:'International Students', path:"/about/trustees"},
+                {title:'Financial aid', subMenu: [
+                        {title:'By the State', path:"/about/trustees"},
+                        {title:'By the Government', path:"/about/trustees"},
+                    ]},
+            ]},
+        {title: "Career", submenu:[
+                {title:'Career Development', path:"/about/trustees"},
+                {title:'Alumni', subMenu:[
+                        {title:'Alumni Union', path:"/about/trustees"},
+                        {title:'Alumni Acievments', path:"/about/trustees"},
+                    ]},
+                {title:'Jobs', path:"/about/trustees"},
+            ]},
+        {title: "Internationalization", subMenu:[
+                {title: 'Our Partners', path:"/about/trustees"},
+                {title: 'International and National Programs', subMenu: [
+                        {title:'Erasmus + Programs', path:"/about/trustees"},
+                        {title:'DAAD Programs', path:"/about/trustees"},
+                        {title:'Other Programs', path:"/about/trustees"},
+                    ]},
+                {title: 'International Membership', path:"/about/trustees"},
+            ] },
+        // {title: "Media", pathUrl: "/news"},
+         {title: "Media", subMenu: [
+                 {title:'News', path: '/about/trustees'},
+                 {title:'Announcements', path:"/about/trustees"},
+                 {title:'Events', path:"/about/trustees"},
+             ]},
+
         {title: "Contact us", pathUrl: "/contact"},
     ];
     return (
@@ -43,15 +140,15 @@ const App = ({children}) => {
                     <div className='w-[90%] mx-auto flex justify-between items-center py-2 '>
                         <div className='w-[80%] hidden lg:flex'>
                             <p>Address: 10 Davit Anhaght str., Yerevan, Armenia</p>
-                            <p className='ml-5'>Phone: (010) 240038</p>
+                            <p className='ml-5'>Tel: (010) 240038</p>
                         </div>
                         <div className='w-[20%]'>
                             <ul className='flex justify-normal lg:justify-end '>
-                                <li className='flex items-center language-switcher mr-16'>
+                                <li className='flex items-center language-switcher mr-16 cursor-pointer   hover:opacity-90'>
                                     <Image width={20} height={8} src={'/flagArmenia.png'} alt={'Flag'}/>
-                                    <span className='ml-2'>Հայերեն</span>
+                                    <span className="ml-2 cursor-pointer">Հայերեն</span>
                                 </li>
-                                <li className='items-center flex language-switcher mr-16'>
+                                <li className='items-center flex language-switcher mr-16 cursor-pointer   hover:opacity-90'>
                                     <Image width={20} height={8} src={'/enflag.png'} alt={'Flag'}/>
                                     <span className='ml-2'>English</span>
                                 </li>

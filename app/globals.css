@@ -46,10 +46,20 @@ body {
 .mobileMenu {
   background-color: rgb(21 23 132);
   transition: 1s;
+
+    z-index: 2222222222222;
 }
 .hiddenMenu{
   transform:translateX(100%);
 }
 .showMenu{
   transform:translateX(0%);
+}
+.itemMenus:first-child>span:hover{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.itemMenus:last-child>span:hover{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
