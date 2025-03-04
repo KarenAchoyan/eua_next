@@ -1,8 +1,6 @@
 "use client";
 import {useContext, useState} from "react";
-import Image from "next/image";
 import {NewsContext} from "@/provider/NewsProvider";
-import Link from "next/link";
 import ItemNews from "@/components/news/ItemNews";
 
 const NewsList = () => {
@@ -67,7 +65,7 @@ const NewsList = () => {
         <div className="container mx-auto p-6">
             <h2 className="text-3xl font-bold text-center mb-6">Latest News</h2>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {news?.map((item) => {
                     const lang = 'hy'; // for example
                     const title = lang === "hy" ? item.name_hy : item.name_en;
@@ -89,8 +87,8 @@ const NewsList = () => {
                                 onClick={() => page !== "..." && handlePageClick(page)}
                                 className={`px-4 py-2 rounded-lg ${
                                     page === currentPage
-                                        ? "bg-purple-600 text-white"
-                                        : "bg-white text-purple-600 border border-gray-300 hover:bg-purple-600 hover:text-white"
+                                        ? "bg-[#151784] text-white"
+                                        : "bg-white text-[#151784] border border-gray-300 hover:bg-[#151784] hover:text-white"
                                 }`}
                                 disabled={page === "..."}>
                                 {page}

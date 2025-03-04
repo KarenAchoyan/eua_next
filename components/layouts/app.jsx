@@ -36,18 +36,18 @@ const App = ({children}) => {
             <header className="text-white bg-[#151784]">
                 <div className='w-full '>
                     <div className='w-[90%] mx-auto flex justify-between items-center py-2 '>
-                        <div className='w-[80%] hidden md:flex'>
+                        <div className='w-[80%] hidden lg:flex'>
                             <p>Address: 10 Davit Anhaght str., Yerevan, Armenia</p>
                             <p className='ml-5'>Phone: (010) 240038</p>
                         </div>
                         <div className='w-[20%]'>
-                            <ul className='flex justify-normal md:justify-end '>
+                            <ul className='flex justify-normal lg:justify-end '>
                                 <li className='flex items-center language-switcher mr-16'>
-                                    <Image width={20} height={8} src={'/enflag.png'} alt={'Flag'}/>
+                                    <Image width={20} height={8} src={'/flagArmenia.png'} alt={'Flag'}/>
                                     <span className='ml-2'>Հայերեն</span>
                                 </li>
                                 <li className='items-center flex language-switcher mr-16'>
-                                    <Image width={20} height={8} src={'/flagArmenia.png'} alt={'Flag'}/>
+                                    <Image width={20} height={8} src={'/enflag.png'} alt={'Flag'}/>
                                     <span className='ml-2'>English</span>
                                 </li>
                             </ul>

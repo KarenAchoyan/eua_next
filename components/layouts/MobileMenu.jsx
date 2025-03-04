@@ -24,7 +24,7 @@ const MobileMenu = ({menuItems}) => {
                 <MenuOutlined/>
             </div>
             <div
-                className={`mobileMenu w-[40%] sm:w-[70%] fixed top-0 right-0 h-full z-10 bg-white p-6 z-50" ${isMenuOpen === false ? 'hiddenMenu' : 'showMenu'}`}>
+                className={`mobileMenu w-[85%] sm:w-[55%] fixed top-0 right-0 h-full z-10 bg-white p-6 z-50" ${isMenuOpen === false ? 'hiddenMenu' : 'showMenu'}`}>
                 <button
                     className="absolute top-4 left-4 text-2xl"
                     onClick={() => setIsMenuOpen(false)}

@@ -1,4 +1,5 @@
 import React from "react";
+import Details from "@/components/news/details";
 
 async function getSingleNews(slug, lang) {
     try {
@@ -23,15 +24,15 @@ const Single = async ({params, searchParams}) => {
 
     const result = await getSingleNews(slug, lang);
     const data = result.data.data;
+    const interestingNews = result.data.interestingNews;
+    const lastNews = result.data.lastNews;
     if (!result.success) {
         return <h1 className="text-center text-2xl font-bold mt-10">{result.message}</h1>;
     }
 
     return (
-        <div className="container mx-auto p-6">
-            <h1 className="text-3xl font-bold">
-                {lang === "hy" ? data?.name_hy : data?.name_en}
-            </h1>
+        <div className="mx-auto p-6">
+          <Details lang={lang} data={data} interestingNews={interestingNews} lastNews={lastNews} />
         </div>
     );
 };

@@ -45,7 +45,6 @@ body {
 }
 .mobileMenu {
   background-color: rgb(21 23 132);
-  width: 40%;
   transition: 1s;
 }
 .hiddenMenu{
