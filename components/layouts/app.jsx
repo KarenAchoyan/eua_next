@@ -11,15 +11,20 @@ const App = ({children}) => {
         {
             title: "About us",
             subMenu: [
-                {title: "Governing Bodies", subMenu: ["Board of Trustees", "Scientific Council"]},
-                "Rector",
-                "Staff",
-                "Branches",
-                "Organization",
-                "Documents",
-                "Vacancies",
-                "FAQ",
-                "University Ranking",
+                {
+                    title: "Governing Bodies", subMenu: [
+                        {title: "Board of Trustees", path: "/about/trustees"},
+                        {title: "Scientific Council", path: "/about/trustees"},
+                    ]
+                },
+                {title:  "Rector", path: "/about/trustees"},
+                {title:  "Staff", path: "/about/trustees"},
+                {title:  "Branches", path: "/about/trustees"},
+                {title:  "Organization", path: "/about/trustees"},
+                {title:  "Documents", path: "/about/trustees"},
+                {title:  "Vacancies", path: "/about/trustees"},
+                {title:  "FAQ", path: "/about/trustees"},
+                {title:  "University Ranking", path: "/about/trustees"},
             ],
         },
         {title: "Applicant"},
@@ -57,7 +62,8 @@ const App = ({children}) => {
                 <div className="w-[90%] mx-auto flex justify-between items-center">
                     <div className='w-[80%] md:w-[20%]'>
                         <Link href={'/'}>
-                            <Image width={120} className='object-cover' height={50} alt='logo' src='/logo2.png' priority />
+                            <Image width={120} className='object-cover' height={50} alt='logo' src='/logo2.png'
+                                   priority/>
                         </Link>
                     </div>
                     <HeaderMenu menuItems={menuItems}/>

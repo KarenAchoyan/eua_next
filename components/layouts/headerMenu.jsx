@@ -22,7 +22,7 @@ const HeaderMenu = ({menuItems}) => {
                                                         href="#"
                                                         className="block px-4 py-2 hover:bg-gray-200"
                                                     >
-                                                        {subItem}
+                                                        {subItem.title}
                                                     </a>
                                                 ) : (
                                                     <>
@@ -31,13 +31,13 @@ const HeaderMenu = ({menuItems}) => {
                                                                     {subItem.title}
                                                                 </span>
                                                         <ul className="absolute left-full top-0 mt-0 w-48 bg-white text-black shadow-lg rounded-lg sub-dropdown">
-                                                            {subItem.subMenu.map((deepItem, deepIndex) => (
+                                                            {subItem?.subMenu?.map((deepItem, deepIndex) => (
                                                                 <li key={deepIndex}>
                                                                     <a
                                                                         href="#"
                                                                         className="block px-4 py-2 hover:bg-gray-200"
                                                                     >
-                                                                        {deepItem}
+                                                                        {deepItem.title}
                                                                     </a>
                                                                 </li>
                                                             ))}
