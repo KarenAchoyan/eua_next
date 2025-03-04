@@ -12,8 +12,8 @@ async function getItem() {
 
 const Page = async () => {
     const res = await getItem();
-    const data = res.data.data;
-    const totalPages = res.data.last_page || 1;
+    const data = await res.data.data;
+    const totalPages = await res.data.last_page || 1;
     return (
         <>
             <NewsProvider value={{data, totalPages}}>
