@@ -12,7 +12,7 @@ async function getItem() {
 
 const Page = async () => {
     const res = await getItem();
-    const data = await res.data.data;
+    const data = await res.data.news;
     const totalPages = await res.data.last_page || 1;
     console.log("totalPages"+totalPages)
     console.log("data"+data)

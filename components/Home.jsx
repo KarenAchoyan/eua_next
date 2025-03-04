@@ -7,13 +7,14 @@ import NewsSection from "@/components/news/HomeNews";
 
 
 const Home =   () => {
+
     return (
-        <div>
+        <>
             <Banner/>
             <Discover/>
             <NewsSection/>
             <EventsGallery/>
-        </div>
+        </>
     )
 }
 
