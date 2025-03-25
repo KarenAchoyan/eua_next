@@ -25,13 +25,20 @@ const ItemNews = ({item, slug, title, lang, type}) => {
                             Read More
                         </button>
                     </Link>
-                    :
-                    <Link href={`/announcements/${slug}?lang=${lang}`} passHref>
-                        <button
-                            className="mt-4 bg-[#151784] text-white text-[14px] lg:text-lg px-4 py-2 rounded hover:opacity-90">
-                            Read More
-                        </button>
-                    </Link>
+                    : type === 'news' ?
+                        <Link href={`/events/${slug}?lang=${lang}`} passHref>
+                            <button
+                                className="mt-4 bg-[#151784] text-white text-[14px] lg:text-lg px-4 py-2 rounded hover:opacity-90">
+                                Read More
+                            </button>
+                        </Link>
+                        :
+                        <Link href={`/announcements/${slug}?lang=${lang}`} passHref>
+                            <button
+                                className="mt-4 bg-[#151784] text-white text-[14px] lg:text-lg px-4 py-2 rounded hover:opacity-90">
+                                Read More
+                            </button>
+                        </Link>
                 }
 
 
