@@ -1,16 +1,17 @@
 import React from 'react';
-import Image from "next/image";
+import {Image} from "antd";
 import Link from "next/link";
 
 const ItemNews = ({item, slug, title, lang, type}) => {
     return (
         <div key={item.id} className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="relative w-full h-48">
+            <div className="relative w-full h-48 news-item">
                 <Image
                     src={"https://eua.am/" + item.avatar}
                     alt={title}
                     layout="fill"
                     objectFit="cover"
+                    preview={false}
                     priority
                 />
             </div>

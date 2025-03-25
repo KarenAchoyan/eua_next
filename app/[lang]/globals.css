@@ -52,6 +52,14 @@ body {
 .hiddenMenu{
   transform:translateX(100%);
 }
+.news-item .ant-image{
+  height: 100%;
+  width: 100%;
+}
+.news-item .ant-image-img{
+  height: 100%;
+  object-fit: cover;
+}
 .showMenu{
   transform:translateX(0%);
 }

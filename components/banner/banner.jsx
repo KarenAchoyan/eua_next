@@ -2,7 +2,7 @@
 import {useContext, useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Image from "next/image";
+import {Image} from "antd";
 import { Modal, Form, Input, Select, Button } from "antd";
 import {MainContext} from "@/provider/MainProvider";
 
@@ -21,7 +21,7 @@ const Banner = () => {
             <Swiper loop={true} autoplay={{ delay: 3000 }} allowTouchMove={true} navigation={false}>
                 {slides.map((image, index) => (
                     <SwiperSlide key={index} className='h-full'>
-                        <Image width={1500} height={800} src={"https://eua.am"+image.image} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+                        <Image src={"https://eua.am"+image.image} preview={false} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
                     </SwiperSlide>
                 ))}
             </Swiper>
