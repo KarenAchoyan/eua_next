@@ -20,9 +20,8 @@ async function getSingleNews(slug, lang) {
 
 const Single = async ({params, searchParams}) => {
     const {slug} = params;
-    const lang = searchParams?.lang || "hy";
 
-    const result = await getSingleNews(slug, lang);
+    const result = await getSingleNews(slug, params.lang);
     const data = result.data.data;
     const interestingNews = result.data.interestingNews;
     const lastNews = result.data.lastNews;
@@ -32,7 +31,7 @@ const Single = async ({params, searchParams}) => {
 
     return (
         <div className="mx-auto p-6">
-          <Details lang={lang} data={data} interestingNews={interestingNews} lastNews={lastNews} />
+          <Details lang={params?.lang} data={data} interestingNews={interestingNews} lastNews={lastNews} />
         </div>
     );
 };

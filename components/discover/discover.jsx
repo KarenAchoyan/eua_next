@@ -1,6 +1,7 @@
 import React from "react";
 
 const DiscoverMore = () => {
+
     return (
         <div className="text-center py-10 w-[90%] md:w-[70%] mx-auto">
             <h2 className="text-3xl font-semibold mb-6">Discover more</h2>

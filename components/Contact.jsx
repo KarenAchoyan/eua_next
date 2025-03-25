@@ -1,7 +1,9 @@
 import React from 'react';
 import {FaGlobe, FaMapMarkerAlt, FaPhoneAlt} from "react-icons/fa";
+import {getDictionary} from "@/utils/utils";
 
-const Contact = () => {
+const Contact = async ({lang}) => {
+    const dict = await getDictionary(lang);
     return (
         <>
             <div className="w-full bg-gray-100 py-10">

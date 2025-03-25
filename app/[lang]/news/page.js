@@ -10,13 +10,13 @@ async function getItem() {
 }
 
 
-const Page = async () => {
+const Page = async ({params}) => {
     const res = await getItem();
     const data = await res.data.news;
     const totalPages = await res.data.total_pages || 1;
     return (
         <>
-            <NewsProvider value={{data, totalPages}}>
+            <NewsProvider value={{data, totalPages, lang:params.lang ? params.lang : 'hy'}}>
                 <News/>
             </NewsProvider>
         </>

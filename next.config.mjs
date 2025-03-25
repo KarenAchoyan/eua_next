@@ -7,7 +7,7 @@ const nextConfig = {
                 hostname: "eua.am",
             },
         ],
-    },
+    }
 };
 
 export default nextConfig;

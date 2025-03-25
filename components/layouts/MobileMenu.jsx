@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
-import "../../app/globals.css";
+import "@/app/[lang]/globals.css";
 import {DownOutlined, MenuOutlined, UpOutlined} from "@ant-design/icons";
 
 const MobileMenu = ({menuItems}) => {

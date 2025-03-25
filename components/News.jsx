@@ -4,7 +4,7 @@ import {NewsContext} from "@/provider/NewsProvider";
 import ItemNews from "@/components/news/ItemNews";
 
 const NewsList = () => {
-    const {data,totalPages} = useContext(NewsContext);
+    const {data,totalPages, lang} = useContext(NewsContext);
     const [news, setNews] = useState(data);
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -67,12 +67,11 @@ const NewsList = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {news?.map((item) => {
-                    const lang = 'hy'; // for example
                     const title = lang === "hy" ? item.name_hy : item.name_en;
                     const slug = title.toLowerCase().replace(/\s+/g, "-"); // Convert title to slug
 
                     return (
-                       <ItemNews lang={lang} key={item.id} title={title} item={item} slug={slug} />
+                       <ItemNews lang={params} key={item.id} title={title} type={'news'} item={item} slug={slug} />
                     );
                 })}
             </div>
