@@ -17,7 +17,7 @@ const NewsSection = () => {
                         const slug = title.toLowerCase().replace(/\s+/g, "-"); // Convert title to slug
 
                         return (
-                            <ItemNews lang={lang} key={item.id} title={title} item={item} slug={slug}/>
+                            <ItemNews lang={lang} key={item.id} title={title}  type={'news'}  item={item} slug={slug}/>
                         );
                     })}
                 </div>

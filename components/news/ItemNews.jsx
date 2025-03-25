@@ -20,21 +20,21 @@ const ItemNews = ({item, slug, title, lang, type}) => {
                     {title.length > 60 ? title.substring(0, 60) + "..." : title}
                 </h3>
                 {type === 'news' ?
-                    <Link href={`/news/${slug}?lang=${lang}`} passHref>
+                    <Link href={`/${lang}/news/${slug}?lang=${lang}`} passHref>
                         <button
                             className="mt-4 bg-[#151784] text-white text-[14px] lg:text-lg px-4 py-2 rounded hover:opacity-90">
                             Read More
                         </button>
                     </Link>
                     : type === 'news' ?
-                        <Link href={`/events/${slug}?lang=${lang}`} passHref>
+                        <Link href={`/${lang}/events/${slug}?lang=${lang}`} passHref>
                             <button
                                 className="mt-4 bg-[#151784] text-white text-[14px] lg:text-lg px-4 py-2 rounded hover:opacity-90">
                                 Read More
                             </button>
                         </Link>
                         :
-                        <Link href={`/announcements/${slug}?lang=${lang}`} passHref>
+                        <Link href={`/${lang}/announcements/${slug}?lang=${lang}`} passHref>
                             <button
                                 className="mt-4 bg-[#151784] text-white text-[14px] lg:text-lg px-4 py-2 rounded hover:opacity-90">
                                 Read More

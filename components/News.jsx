@@ -3,7 +3,7 @@ import {useContext, useState} from "react";
 import {NewsContext} from "@/provider/NewsProvider";
 import ItemNews from "@/components/news/ItemNews";
 
-const NewsList = () => {
+const    NewsList = ({type}) => {
     const {data,totalPages, lang} = useContext(NewsContext);
     const [news, setNews] = useState(data);
     const [currentPage, setCurrentPage] = useState(1);
@@ -71,7 +71,7 @@ const NewsList = () => {
                     const slug = title.toLowerCase().replace(/\s+/g, "-"); // Convert title to slug
 
                     return (
-                       <ItemNews lang={params} key={item.id} title={title} type={'news'} item={item} slug={slug} />
+                       <ItemNews lang={params} key={item.id} title={title} type={type} item={item} slug={slug} />
                     );
                 })}
             </div>

@@ -17,7 +17,7 @@ const Page = async ({params}) => {
     return (
         <>
             <NewsProvider value={{data, totalPages, lang:params.lang ? params.lang : 'hy'}}>
-                <News/>
+                <News type='events'/>
             </NewsProvider>
         </>
     );
