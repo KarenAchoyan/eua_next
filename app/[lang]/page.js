@@ -1,5 +1,6 @@
 import {MainProvider} from "@/provider/MainProvider";
 import Home from "@/components/Home";
+import {getDictionary} from "@/app/[lang]/dictionaries";
 
 async function getGalleries() {
     const res = await fetch('https://eua.am/api/galleries')
@@ -31,10 +32,11 @@ export default async function Page({params}) {
     const slides = res2.data.sliders;
     const news = res3.data.news;
     const events = res4.data.events;
+    const dict = await getDictionary(params.lang)
     return (
         <div>
             <MainProvider value={{galleries, slides, news, events, lang:params.lang}}>
-                <Home/>
+                <Home dict={dict}/>
             </MainProvider>
         </div>
     );

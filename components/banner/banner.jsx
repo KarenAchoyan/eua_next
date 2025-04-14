@@ -8,7 +8,7 @@ import {MainContext} from "@/provider/MainProvider";
 
 const { Option } = Select;
 
-const Banner = () => {
+const Banner = ({dict}) => {
     const [isOpen, setIsOpen] = useState(false);
     const {slides} = useContext(MainContext);
 
@@ -17,7 +17,7 @@ const Banner = () => {
     };
 
     return (
-        <div className="w-full h-[80vh] relative">
+        <div className="w-full h-[80vh] relative banner-image">
             <Swiper loop={true} autoplay={{ delay: 3000 }} allowTouchMove={true} navigation={false}>
                 {slides.map((image, index) => (
                     <SwiperSlide key={index} className='h-full'>
@@ -28,7 +28,7 @@ const Banner = () => {
 
             <div className='absolute bottom-[100px] left-[80px] z-10 text-[20px]'>
                 <button onClick={() => setIsOpen(true)} className="bg-[#151784] text-white px-8 py-4 rounded-full hover:opacity-90">
-                    Apply now
+                    {dict.apply_now}
                 </button>
             </div>
 

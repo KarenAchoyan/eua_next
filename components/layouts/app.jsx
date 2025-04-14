@@ -5,10 +5,13 @@ import Link from "next/link";
 import MobileMenu from "@/components/layouts/MobileMenu";
 import {menuItems} from "@/utils/utils";
 import { useRouter } from "next/navigation";
+import {useContext} from "react";
+import {AppContext} from "@/provider/AppProvider";
 
 
-const App = ({children, locale}) => {
+const App = ({children, lang,}) => {
     const router = useRouter();
+    const {data, dict} = useContext(AppContext)
 
     const changeLanguage = (l) => {
         router.push(`/${l}`); // Redirect to the selected language URL
@@ -19,11 +22,11 @@ const App = ({children, locale}) => {
                 <div className='w-full '>
                     <div className='w-[90%] mx-auto flex justify-between items-center py-2 '>
                         <div className='w-[80%] hidden lg:flex'>
-                            <p>Address: 10 Davit Anhaght str., Yerevan, Armenia</p>
-                            <p className='ml-5'>Tel: (010) 240038</p>
+                            <p>{dict.address}: 10 Davit Anhaght str., Yerevan, Armenia</p>
+                            <p className='ml-5'>{dict.phone}: (010) 240038</p>
                         </div>
-                        <div className='w-[20%]'>
-                            <ul className='flex justify-end  '>
+                        <div className='w-full lg:w-[20%]'>
+                            <ul className='flex justify-end'>
                                 <li className='flex items-center   language-switcher mr-16 cursor-pointer   hover:opacity-90'  onClick={()=>changeLanguage('hy')}>
                                     <Image width={20} height={8} src={'/flagArmenia.png'} alt={'Flag'}/>
                                     <span className="ml-2 cursor-pointert">Հայերեն</span>
@@ -44,7 +47,7 @@ const App = ({children, locale}) => {
                         </Link>
                     </div>
 
-                    <HeaderMenu menuItems={menuItems} locale={locale}/>
+                    <HeaderMenu menuItems={data} lang={lang}/>
 
                     <div>
                         <MobileMenu menuItems={menuItems}/>
@@ -57,18 +60,18 @@ const App = ({children, locale}) => {
             <footer className="bg-blue-900 text-white">
                 <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
-                        <h3 className="text-lg font-semibold mb-3">Pages</h3>
+                        <h3 className="text-lg font-semibold mb-3">{dict.pages}</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:underline">Home</a></li>
-                            <li><a href="#" className="hover:underline">Contact us</a></li>
-                            <li><a href="#" className="hover:underline">News</a></li>
-                            <li><a href="#" className="hover:underline">Career Development</a></li>
+                            <li><Link href="/" className="hover:underline">{dict.home}</Link></li>
+                            <li><Link href="/contact" className="hover:underline">{dict.contact_us}</Link></li>
+                            <li><Link href="/news" className="hover:underline">{dict.news}</Link></li>
+                            {/*<li><Link href="/" className="hover:underline">{dict.career_development}</Link></li>*/}
                         </ul>
                     </div>
 
                     {/* Faculties Section */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-3">Faculties</h3>
+                        <h3 className="text-lg font-semibold mb-3">{dict.faculties}</h3>
                         <ul className="space-y-2">
                             <li>Management (BA)</li>
                             <li>Management (MA)</li>
@@ -80,17 +83,17 @@ const App = ({children, locale}) => {
 
                     {/* Contact Section */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-3">Contact us</h3>
-                        <p><strong>Address:</strong> 10 Davit Anhaght str., Yerevan, Armenia</p>
-                        <p><strong>Phone:</strong> (010) 240038</p>
-                        <p><strong>Email:</strong> info@eua.am</p>
+                        <h3 className="text-lg font-semibold mb-3">{dict.contact_us}</h3>
+                        <p><strong>{dict.address}:</strong> 10 Davit Anhaght str., Yerevan, Armenia</p>
+                        <p><strong>{dict.phone}:</strong> (010) 240038</p>
+                        <p><strong>{dict.email}:</strong> info@eua.am</p>
                     </div>
                 </div>
 
                 {/* Bottom Section */}
                 <div className="bg-blue-950 py-4 text-center text-sm">
-                    <p>© 2024 ԵՐԵՎԱՆԻ ՀՌՈՄԻՆԱԿԱՆ ՀԻՄՆԱՐԿ | Բոլոր իրավունքները պաշտպանված են:</p>
-                    <p>Կայքը պատրաստվել է <a href="#" className="underline">GeekLab</a>-ի կողմից</p>
+                    <p>© {dict.foundation} | {dict.rights_reserved}:</p>
+                    <p>{dict.website_by}</p>
                 </div>
             </footer>
         </>

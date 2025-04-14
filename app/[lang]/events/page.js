@@ -6,7 +6,7 @@ import {getDictionary} from "@/utils/utils";
 
 async function getItem() {
     const page = 1;
-    const res = await fetch(`https://eua.am/api/news?page=${page}`);
+    const res = await fetch(`https://eua.am/api/events?page=${page}`);
     return res.json()
 }
 
@@ -19,7 +19,7 @@ const Page = async ({params}) => {
     return (
         <>
             <NewsProvider value={{data, totalPages, lang:params.lang ? params.lang : 'hy', dict}}>
-                <News type='news' title={dict.news}/>
+                <News type='events' dict={dict} title={dict.events}/>
             </NewsProvider>
         </>
     );

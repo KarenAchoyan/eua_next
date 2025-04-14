@@ -7,10 +7,9 @@ import "slick-carousel/slick/slick-theme.css";
 import {MainContext} from "@/provider/MainProvider";
 import {Image} from "antd";
 
-export default function EventsGallery() {
+export default function EventsGallery({dict}) {
     const [activeIndex, setActiveIndex] = useState(0);
     const {galleries, events} = useContext(MainContext);
-
     const settings = {
         dots: true,
         infinite: true,
@@ -34,11 +33,11 @@ export default function EventsGallery() {
 
     return (
         <div className="w-[90%] md:w-[80%] lg:w-[70%] mx-auto py-10">
-            <h2 className="text-3xl font-semibold text-center">Events</h2>
+            <h2 className="text-3xl font-semibold text-center">{dict.events}</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-8 ">
                 <div>
-                    <h3 className="text-lg font-semibold text-blue-700 mb-4">GALLERY</h3>
+                    <h3 className="text-lg font-semibold text-blue-700 mb-4">{dict.gallery}</h3>
                     <Slider {...settings}>
                         {galleries.map((image, index) => (
                             <div key={index} className="px-2 flex justify-center">
@@ -54,7 +53,7 @@ export default function EventsGallery() {
                     </Slider>
                 </div>
                 <div>
-                    <h3 className="text-lg font-semibold text-blue-700 mb-4">EVENTS</h3>
+                    <h3 className="text-lg font-semibold text-blue-700 mb-4">{dict.events}</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {events.map((event, index) => {
                             const date = new Date(event.created_at);

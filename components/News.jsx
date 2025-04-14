@@ -3,14 +3,15 @@ import {useContext, useState} from "react";
 import {NewsContext} from "@/provider/NewsProvider";
 import ItemNews from "@/components/news/ItemNews";
 
-const    NewsList = ({type}) => {
+const  NewsList = ({type,title, dict}) => {
     const {data,totalPages, lang} = useContext(NewsContext);
+
     const [news, setNews] = useState(data);
     const [currentPage, setCurrentPage] = useState(1);
 
     const fetchNews = async (page) => {
         try {
-            const res = await fetch(`https://eua.am/api/news?page=${page}`);
+            const res = await fetch(`https://eua.am/api/${type}?page=${page}`);
             const data = await res.json();
             if (data.success) {
                 setNews(data.data.news);
@@ -63,7 +64,7 @@ const    NewsList = ({type}) => {
 
     return (
         <div className="container mx-auto p-6">
-            <h2 className="text-3xl font-bold text-center mb-6">Latest News</h2>
+            <h2 className="text-3xl font-bold text-center mb-6">{title}</h2>
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {news?.map((item) => {
@@ -71,7 +72,7 @@ const    NewsList = ({type}) => {
                     const slug = title.toLowerCase().replace(/\s+/g, "-"); // Convert title to slug
 
                     return (
-                       <ItemNews lang={params} key={item.id} title={title} type={type} item={item} slug={slug} />
+                       <ItemNews key={item.id} title={title} type={type} item={item} dict={dict} slug={slug} />
                     );
                 })}
             </div>

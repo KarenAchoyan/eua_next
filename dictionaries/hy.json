@@ -1,5 +1,26 @@
 {
-  "products": {
-    "cart": "Add to Cart"
-  }
+  "apply_now": "Դիմել հիմա",
+  "discover_more": "Բացահայտել ավելին",
+  "latest_news": "Վերջին լուրերը",
+  "read_more": "Կարդալ ավելին",
+  "all_news": "Բոլոր լուրերը",
+  "events": "Միջոցառումներ",
+  "gallery": "Պատկերասրահ",
+  "pages": "Էջեր",
+  "home": "Գլխավոր",
+  "contact_us": "Կապ մեզ հետ",
+  "news": "Լուրեր",
+  "career_development": "Պաշտոնական զարգացում",
+  "faculties": "Ֆակուլտետներ",
+  "management_ba": "Կառավարման բակալավրիատ (BA)",
+  "management_ma": "Կառավարման մագիստրատուրա (MA)",
+  "marketing": "Մարքեթինգ",
+  "financial_technologies_ba": "Ֆինանսական տեխնոլոգիաներ և բանկավարում (BA)",
+  "address": "Հասցե",
+  "phone": "Հեռախոս",
+  "email": "Էլ. փոստ",
+  "foundation": "ԵՐԵՎԱՆԻ ՀՌՈՄԻՆԱԿԱՆ ՀԻՄՆԱՐԿ",
+  "rights_reserved": "Բոլոր իրավունքները պաշտպանված են",
+  "website_by": "Կայքը պատրաստվել է GeekLab-ի կողմից",
+  "announcements": "Հայտարարություններ"
 }

@@ -6,14 +6,14 @@ import EventsGallery from "./galleryEvent/galleryevent";
 import NewsSection from "@/components/news/HomeNews";
 
 
-const Home =   () => {
+const Home =   ({dict}) => {
 
     return (
         <>
-            <Banner/>
-            <Discover/>
-            <NewsSection/>
-            <EventsGallery/>
+            <Banner dict={dict}/>
+            <Discover dict={dict}/>
+            <NewsSection dict={dict}/>
+            <EventsGallery dict={dict}/>
         </>
     )
 }

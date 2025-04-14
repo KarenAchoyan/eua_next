@@ -1,5 +1,26 @@
 {
-  "products": {
-    "cart": "Add to Cart"
-  }
+  "apply_now": "Apply now",
+  "discover_more": "Discover more",
+  "latest_news": "Latest News",
+  "read_more": "Read More",
+  "all_news": "All News",
+  "events": "Events",
+  "gallery": "Gallery",
+  "pages": "Pages",
+  "home": "Home",
+  "contact_us": "Contact us",
+  "news": "News",
+  "career_development": "Career Development",
+  "faculties": "Faculties",
+  "management_ba": "Management (BA)",
+  "management_ma": "Management (MA)",
+  "marketing": "Marketing",
+  "financial_technologies_ba": "Financial Technologies and Banking (BA)",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "Email",
+  "foundation": "Yerevan Roman Catholic Foundation",
+  "rights_reserved": "All rights reserved",
+  "website_by": "The website was created by GeekLab",
+  "announcements": "Announcements"
 }

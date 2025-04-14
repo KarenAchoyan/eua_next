@@ -1,7 +1,7 @@
 import ItemNews from "@/components/news/ItemNews";
 import Link from "next/link";
 import {Image} from "antd";
-const Details = ({lang, data, interestingNews, lastNews}) => {
+const Details = ({lang, data, interestingNews, lastNews,dict}) => {
     return (
         <>
             <div className="w-[90%] lg:container mx-auto bg-white rounded-lg shadow-lg overflow-hidden p-5 flex">
@@ -31,18 +31,13 @@ const Details = ({lang, data, interestingNews, lastNews}) => {
                             </p>
                         </div>
                         <div className='flex flex-wrap gap-3 mt-10'>
-                            <div className='w-[45%] sm:w-1/4'>
-                                <Image src={"/news.png"} alt={"News image"}/>
-                            </div>
-                            <div className='w-[45%] sm:w-1/4'>
-                                <Image src={"/news.png"} alt={"News image"}/>
-                            </div>
-                            <div className='w-[45%] sm:w-1/4'>
-                                <Image src={"/news.png"} alt={"News image"}/>
-                            </div>
-                            <div className='w-[45%] sm:w-1/4'>
-                                <Image src={"/news.png"} alt={"News image"}/>
-                            </div>
+                            {data.images && data.images.length > 0 ? (
+                                JSON.parse(data.images).map((image, index) => (
+                                    <div className='w-[45%] sm:w-1/4' key={index}>
+                                        <Image src={"https://eua.am/"+image} alt={"News image"}/>
+                                    </div>
+                                ))
+                            ) : null}
                         </div>
                     </div>
                 </div>
@@ -76,7 +71,7 @@ const Details = ({lang, data, interestingNews, lastNews}) => {
                         const slug = title.toLowerCase().replace(/\s+/g, "-"); // Convert title to slug
 
                         return (
-                            <ItemNews key={item.id} slug={slug} title={title} item={item} lang={lang}/>
+                            <ItemNews key={item.id} slug={slug} title={title} item={item} dict={dict} lang={lang}/>
                         )
                     })}
                 </div>
