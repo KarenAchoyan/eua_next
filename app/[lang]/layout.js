@@ -3,6 +3,10 @@ import App from "@/components/layouts/app";
 import {AppProvider} from "@/provider/AppProvider";
 import {getDictionary} from "@/app/[lang]/dictionaries";
 
+export const metadata = {
+    title: "EUROPEAN UNIVERSITY OG ARMENIA",
+    description: "",
+};
 
 async function getMenus() {
     const res = await fetch('https://eua.am/api/menus')
