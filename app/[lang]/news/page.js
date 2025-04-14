@@ -19,7 +19,7 @@ const Page = async ({params}) => {
     return (
         <>
             <NewsProvider value={{data, totalPages, lang:params.lang ? params.lang : 'hy', dict}}>
-                <News type='news' title={dict.news}/>
+                <News type='news' dict={dict} title={dict.news}/>
             </NewsProvider>
         </>
     );
