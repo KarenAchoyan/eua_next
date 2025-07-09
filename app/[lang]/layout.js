@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 async function getMenus() {
-    const res = await fetch('https://eua.am/api/menus')
+    const res = await fetch('https://admin.eua.am/api/menus')
     return res.json()
 }
 

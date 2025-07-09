@@ -5,7 +5,7 @@ import {NewsProvider} from "@/provider/NewsProvider";
 
 async function getItem() {
     const page = 1;
-    const res = await fetch(`https://eua.am/api/news?page=${page}`);
+    const res = await fetch(`https://admin.eua.am/api/news?page=${page}`);
     return res.json()
 }
 

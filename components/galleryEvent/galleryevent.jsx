@@ -44,7 +44,7 @@ export default function EventsGallery({dict}) {
                                 <Image
                                     width="100%"
                                     height={200}
-                                    src={`https://eua.am/${image.image}`}
+                                    src={`https://admin.eua.am/${image.image}`}
                                     alt="Gallery image"
                                     className="rounded-lg object-cover"
                                 />

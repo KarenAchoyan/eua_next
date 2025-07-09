@@ -3,7 +3,7 @@ import Content from "@/components/content/content";
 
 async function getContent(slug, lang) {
     try {
-        const res = await fetch(`https://eua.am/api/content/${slug}?lang=${lang}`, {
+        const res = await fetch(`https://admin.eua.am/api/content/${slug}?lang=${lang}`, {
             cache: "no-store",
         });
 

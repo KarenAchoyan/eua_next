@@ -3,22 +3,22 @@ import Home from "@/components/Home";
 import {getDictionary} from "@/app/[lang]/dictionaries";
 
 async function getGalleries() {
-    const res = await fetch('https://eua.am/api/galleries')
+    const res = await fetch('https://admin.eua.am/api/galleries')
     return res.json()
 }
 
 async function getSlides() {
-    const res = await fetch('https://eua.am/api/slides')
+    const res = await fetch('https://admin.eua.am/api/slides')
     return res.json()
 }
 
 async function getNews() {
-    const res = await fetch('https://eua.am/api/lastNewsForHome')
+    const res = await fetch('https://admin.eua.am/api/lastNewsForHome')
     return res.json()
 }
 
 async function getEvents() {
-    const res = await fetch('https://eua.am/api/lastEventsForHome')
+    const res = await fetch('https://admin.eua.am/api/lastEventsForHome')
     return res.json()
 }
 

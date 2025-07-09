@@ -6,7 +6,7 @@ import {getDictionary} from "@/utils/utils";
 
 async function getItem() {
     const page = 1;
-    const res = await fetch(`https://eua.am/api/announcements?page=${page}`);
+    const res = await fetch(`https://admin.eua.am/api/announcements?page=${page}`);
     return res.json()
 }
 

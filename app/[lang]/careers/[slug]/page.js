@@ -4,7 +4,7 @@ import {getDictionary} from "@/app/[lang]/dictionaries";
 
 async function getSingleNews(slug, lang) {
     try {
-        const res = await fetch(`https://eua.am/api/news/${slug}?lang=${lang}`, {
+        const res = await fetch(`https://admin.eua.am/api/news/${slug}?lang=${lang}`, {
             cache: "no-store",
         });
 

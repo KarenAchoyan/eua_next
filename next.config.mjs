@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "eua.am",
+                hostname: "admin.eua.am",
             },
         ],
     }

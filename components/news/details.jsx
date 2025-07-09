@@ -34,7 +34,7 @@ const Details = ({lang, data, interestingNews, lastNews,dict}) => {
                             {data.images && data.images.length > 0 ? (
                                 JSON.parse(data.images).map((image, index) => (
                                     <div className='w-[45%] sm:w-1/4' key={index}>
-                                        <Image src={"https://eua.am/"+image} alt={"News image"}/>
+                                        <Image src={"https://admin.eua.am/"+image} alt={"News image"}/>
                                     </div>
                                 ))
                             ) : null}

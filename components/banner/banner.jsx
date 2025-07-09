@@ -21,7 +21,7 @@ const Banner = ({dict}) => {
             <Swiper loop={true} autoplay={{ delay: 3000 }} allowTouchMove={true} navigation={false}>
                 {slides.map((image, index) => (
                     <SwiperSlide key={index} className='h-full'>
-                        <Image src={"https://eua.am"+image.image} preview={false} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+                        <Image src={"https://admin.eua.am/"+image.image} preview={false} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
                     </SwiperSlide>
                 ))}
             </Swiper>
